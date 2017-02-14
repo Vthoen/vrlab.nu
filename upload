@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+gulp
+
+gsutil cp -r dist/* gs://www.vrlab.nu/
+
+gsutil setmeta -h Cache-Control:no-cache gs://vrlab.nu/index.html
+# gsutil setmeta -h Cache-Control:no-cache gs://offertetool.modern-h.nl/static/bundle.js

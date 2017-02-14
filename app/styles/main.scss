@@ -1,10 +1,13 @@
-$font-family-sans-serif: 'Roboto';
+@import url('https://fonts.googleapis.com/css?family=Roboto-thin');
+
+$font-family-sans-serif: 'Roboto-thin', sans-serif;
+
 $blue: #2A3440;
+$green: #77C7A9;
+$white: #F2F2F2;
 // bower:scss
 @import "bower_components/bootstrap/scss/bootstrap.scss";
 // endbower
-
-
 
 
 .browserupgrade {
@@ -14,9 +17,14 @@ $blue: #2A3440;
   padding: 0.2em 0;
 }
 
+body, html {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
 /* Space out content a bit */
 body {
-  padding-top: 1.5rem;
+  // padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
 
@@ -28,44 +36,58 @@ body {
   padding-left: 1rem;
 }
 
+* {
+  font-size: 1.05em;
+}
+h2 {
+  font-size: 2em;
+}
+
 
 
 @mixin tileable(){
   background-size: 1140px;
+  @include media-breakpoint-down(md) {
+    background-size: 100%;
+  }
 }
 
 /* Custom page header */
 header {
+  padding: 30px;
+  padding-bottom: 150px;
   img#logo {
     display: block;
-    height: 280px;
-    margin: 20px auto;
+    width: 700px;
+    margin: 0px auto;
   }
-  height: 420px;
+  // height: 420px;
   // width: 767px;
   background: url("../images/desk_banner.svg") repeat-x center bottom;
+  background-color: white;
   @include tileable();
 }
 .section {
+  overflow: hidden;
   .container{
-    padding: 80px;
+    padding: 170px 100px 100px;
     @include clearfix();
   }
 }
 
 
 .section-1 {
-  padding: 150px 20px 0;
+  // padding: 150px 20px 0;
   background: url("../images/edge_green.svg") repeat-x center top;
   @include tileable();
 }
 
 .section-2 {
+  background:
+     url("../images/dedge_verywhite.svg") repeat-x center top,
+     url("../images/edge_verywhite.svg") repeat-x center bottom;
   background-color: $blue;
-  // background:
-  //    url("../images/edge_blue.svg") repeat-x center top,
-  //    url("../images/edge_blue.svg") repeat-x center bottom;
-  // @include tileable();
+  @include tileable();
 
   .container {
     // padding: 0;
@@ -121,7 +143,12 @@ header {
 }
 
 .section-4 {
+  background:
+     url("../images/dedge_verywhite.svg") repeat-x center top,
+     url("../images/edge_verywhite.svg") repeat-x center bottom;
   background-color: $blue;
+  @include tileable();
+
   color: white;
   img {
     float: right;
@@ -132,63 +159,42 @@ header {
 }
 
 .section-5 {
-
 }
+
 .section-6 {
-  height: 600px;
-}
-
-/* Custom page footer */
-.footer {
-  padding-top: 1.5rem;
-  color: #777;
-  border-top: .05rem solid #e5e5e5;
-}
-
-// /* Customize container */
-// @media (min-width: 48em) {
-//   .container {
-//     max-width: 46rem;
-//   }
-// }
-.container-narrow > hr {
-  margin: 2rem 0;
-}
-
-/* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  border-bottom: .05rem solid #e5e5e5;
-}
-.jumbotron .btn {
-  padding: .75rem 1.5rem;
-  font-size: 1.5rem;
-}
-
-/* Supporting marketing content */
-.marketing {
-  margin: 3rem 0;
-}
-.marketing p + h4 {
-  margin-top: 1.5rem;
-}
-
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 48em) {
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-right: 0;
-    padding-left: 0;
+  position: relative;
+  .bg {
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    height: 150px;
   }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 2rem;
+  .top {
+    top: 0;
+    background: url("../images/edge_whiteg.svg") repeat-x center top;
+    @include tileable();
   }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
+  .bottom{
+    bottom: 0;
+    background: url("../images/dedge_greeng.svg") repeat-x center bottom;
+    @include tileable();
   }
+  #map {height: 600px;}
 }
-//
+
+footer {
+  background-color: $green;
+  height: 200px;
+}
+
+
+@include media-breakpoint-down(sm) {
+  header {
+    padding-bottom: 15%;
+    img#logo {
+      width: 95%
+    }
+  }
+  .section .container { padding: 100px 10px 80px; }
+}

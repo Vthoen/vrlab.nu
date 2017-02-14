@@ -27,7 +27,7 @@
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     <header class="container-fluid">
-      <img id=logo alt="VRLab.nu" src="images/title_banner.svg"/>
+      <img id=logo class="img-responsive" alt="VRLab.nu" src="images/title_banner.svg"/>
     </header>
     <div class="section section-1 container-fluid">
       <div class="container">
@@ -67,7 +67,7 @@
 
     <div class="section section-4 container-fluid">
       <div class="container">
-        <img src="../images/sellplan_pic.svg"/>
+        <img class="hidden-md-down" src="../images/sellplan_pic.svg"/>
         <h2>Demonstratie</h2>
         <p>Bent u geïnteresseerd in virtual reality visualisaties.
             Neem dan contact op voor een demonstratie op locatie.</p>
@@ -80,23 +80,27 @@
       </div>
     </div>
 
-    <div class="section section-5 container-fluid">
+    <div class="section section-5 container-fluid ">
       <div class="container">
         <h2>Contact</h2>
         <p>Neem gerust contact met ons op voor meer informatie.</p>
         <pre>
-          Naam: Vince 't Hoen 
-          Tel: +316 39 75 64 81,
-          Mail: Vthoen@gmail.com
+Naam: Vince 't Hoen 
+Tel:  +316 39 75 64 81,
+Mail: Vthoen@gmail.com
         </pre>
       </div>
     </div>
 
-    <div id="map" class="section section-6 container-fluid">
-
+    <div class="section section-6 container-fluid">
+      <div id="map" class="row"></div>
+      <div class="bg top"> </div>
+      <div class="bg bottom"> </div>
     </div>
 
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4oK7k1lS9IkjjmQ0Z2jOQoZHysD3o4dY&callback=initMap"> </script>
+    <footer class="container-fluid">
+    </footer>
+
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -132,5 +136,6 @@
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4oK7k1lS9IkjjmQ0Z2jOQoZHysD3o4dY&callback=initMap"> </script>
   </body>
 </html>
