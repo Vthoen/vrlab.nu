@@ -29,21 +29,13 @@ body {
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
+.header, .marketing, .footer {
   padding-right: 1rem;
   padding-left: 1rem;
 }
 
-* {
-  font-size: 1.05em;
-}
-h2 {
-  font-size: 2em;
-}
-
-
+* { font-size: 1.05em; }
+h2 { font-size: 2em; }
 
 @mixin tileable(){
   background-size: 1140px;
@@ -52,7 +44,6 @@ h2 {
   }
 }
 
-/* Custom page header */
 header {
   padding: 30px;
   padding-bottom: 150px;
@@ -61,8 +52,6 @@ header {
     width: 700px;
     margin: 0px auto;
   }
-  // height: 420px;
-  // width: 767px;
   background: url("../images/desk_banner.svg") repeat-x center bottom;
   background-color: white;
   @include tileable();
@@ -77,28 +66,18 @@ header {
 
 
 .section-1 {
-  // padding: 150px 20px 0;
   background: url("../images/edge_green.svg") repeat-x center top;
   @include tileable();
 }
 
 .section-2 {
-  background:
-     url("../images/dedge_verywhite.svg") repeat-x center top,
-     url("../images/edge_verywhite.svg") repeat-x center bottom;
-  background-color: $blue;
-  @include tileable();
-
   .container {
-    // padding: 0;
     height: 500px;
     position: relative;
-    // display: flex;
   }
 
   #vive-guy {
     position: absolute;;
-    // display: block;
     width: 350px;
     left: 50%;
     padding-left: -50%;
@@ -107,7 +86,6 @@ header {
     right: 0;
     margin: auto;
   }
-
   #controller-1, #controller-2 {
     position: absolute;
     width: 75px;
@@ -123,15 +101,17 @@ header {
   #controller-2 {
     transform: rotate(30deg);
     left: 550px;
-
   }
+
+  background:
+     url("../images/dedge_verywhite.svg") repeat-x center top,
+     url("../images/edge_verywhite.svg") repeat-x center bottom;
+  background-color: $blue;
+  @include tileable();
 }
 
 .section-3 {
   .carousel-item{ padding: 100px 0; }
-  // &, .carousel, .carousel-inner, .carousel-item {
-  //   overflow: visible;
-  // }
   .carousel {
     width: 80%;
     margin: auto;
@@ -143,23 +123,19 @@ header {
 }
 
 .section-4 {
-  background:
-     url("../images/dedge_verywhite.svg") repeat-x center top,
-     url("../images/edge_verywhite.svg") repeat-x center bottom;
-  background-color: $blue;
-  @include tileable();
-
   color: white;
   img {
     float: right;
     width: 300px;
-    // margin: 40px;
   }
-
+  background:
+    url("../images/dedge_verywhite.svg") repeat-x center top,
+    url("../images/edge_verywhite.svg") repeat-x center bottom;
+  background-color: $blue;
+  @include tileable();
 }
 
-.section-5 {
-}
+.section-5 { }
 
 .section-6 {
   position: relative;
