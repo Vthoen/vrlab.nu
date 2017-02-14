@@ -1,6 +1,11 @@
+$font-family-sans-serif: 'Roboto';
+$blue: #2A3440;
 // bower:scss
 @import "bower_components/bootstrap/scss/bootstrap.scss";
 // endbower
+
+
+
 
 .browserupgrade {
   margin: 0.2em 0;
@@ -23,17 +28,114 @@ body {
   padding-left: 1rem;
 }
 
-/* Custom page header */
-.header {
-  padding-bottom: 1rem;
-  border-bottom: .05rem solid #e5e5e5;
+
+
+@mixin tileable(){
+  background-size: 1140px;
 }
 
-/* Make the masthead heading the same height as the navigation */
-.header h3 {
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: 3rem;
+/* Custom page header */
+header {
+  img#logo {
+    display: block;
+    height: 280px;
+    margin: 20px auto;
+  }
+  height: 420px;
+  // width: 767px;
+  background: url("../images/desk_banner.svg") repeat-x center bottom;
+  @include tileable();
+}
+.section {
+  .container{
+    padding: 80px;
+    @include clearfix();
+  }
+}
+
+
+.section-1 {
+  padding: 150px 20px 0;
+  background: url("../images/edge_green.svg") repeat-x center top;
+  @include tileable();
+}
+
+.section-2 {
+  background-color: $blue;
+  // background:
+  //    url("../images/edge_blue.svg") repeat-x center top,
+  //    url("../images/edge_blue.svg") repeat-x center bottom;
+  // @include tileable();
+
+  .container {
+    // padding: 0;
+    height: 500px;
+    position: relative;
+    // display: flex;
+  }
+
+  #vive-guy {
+    position: absolute;;
+    // display: block;
+    width: 350px;
+    left: 50%;
+    padding-left: -50%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  #controller-1, #controller-2 {
+    position: absolute;
+    width: 75px;
+    top: 180px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  #controller-1 {
+    transform: rotate(-30deg);
+    right: 550px;
+  }
+  #controller-2 {
+    transform: rotate(30deg);
+    left: 550px;
+
+  }
+}
+
+.section-3 {
+  .carousel-item{ padding: 100px 0; }
+  // &, .carousel, .carousel-inner, .carousel-item {
+  //   overflow: visible;
+  // }
+  .carousel {
+    width: 80%;
+    margin: auto;
+  }
+  .carousel-indicators li {
+    background-color: lighten($blue, 30%);
+    &.active  { background-color: $blue; }
+  }
+}
+
+.section-4 {
+  background-color: $blue;
+  color: white;
+  img {
+    float: right;
+    width: 300px;
+    // margin: 40px;
+  }
+
+}
+
+.section-5 {
+
+}
+.section-6 {
+  height: 600px;
 }
 
 /* Custom page footer */
@@ -43,12 +145,12 @@ body {
   border-top: .05rem solid #e5e5e5;
 }
 
-/* Customize container */
-@media (min-width: 48em) {
-  .container {
-    max-width: 46rem;
-  }
-}
+// /* Customize container */
+// @media (min-width: 48em) {
+//   .container {
+//     max-width: 46rem;
+//   }
+// }
 .container-narrow > hr {
   margin: 2rem 0;
 }
@@ -89,3 +191,4 @@ body {
     border-bottom: 0;
   }
 }
+//
