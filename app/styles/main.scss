@@ -72,13 +72,14 @@ header {
 
 .section-2 {
   .container {
-    height: 500px;
+    // height: 500px;
+    padding: 250px;
     position: relative;
   }
 
   #vive-guy {
     position: absolute;;
-    width: 350px;
+    width: 600px;
     left: 50%;
     padding-left: -50%;
     bottom: 0;
@@ -168,9 +169,9 @@ footer {
 @include media-breakpoint-down(sm) {
   header {
     padding-bottom: 15%;
-    img#logo {
-      width: 95%
-    }
+    img#logo { width: 95% }
   }
+  .section-2 img#vive-guy { width: 95% }
+  .section.section-2 .container { padding: 35%; }
   .section .container { padding: 100px 10px 80px; }
 }
