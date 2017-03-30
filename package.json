@@ -6,11 +6,11 @@
   "scripts": {
     "build": "gulp",
     "start": "gulp serve",
-    "add-dist": "git add dist"
+    "add-docs": "git add docs"
   },
   "pre-commit": [
     "build",
-    "add-dist"
+    "add-docs"
   ],
   "devDependencies": {
     "babel-core": "^6.4.0",
