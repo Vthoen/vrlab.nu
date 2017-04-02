@@ -1,4 +1,6 @@
+console.log('test 1');
 function initMap() {
+console.log('test 2');
   var home = {lat: 52.0182545, lng: 4.2067462};
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 10,
